@@ -1,0 +1,23 @@
+{% extends "menu.html" %}
+
+
+{% block pagename %} 
+    <h1>Game Shop</h1> 
+{% endblock %}
+
+{% block menu %}
+    {{ block.super }}
+{% endblock %}
+
+{% block content %}
+<ul>
+    <li><a href="game_action">Action Games</a></li>
+    <li><a href="game_adventure">Adventure Games</a></li>
+    <li><a href="game_role_playing">Role-Playing Games</a></li>
+</ul>
+<p>
+    Choose your favorite genre of video games and discover new titles to add to your collection!
+</p>
+<button><a href="/platform">Назад</a></button>
+{% endblock %}
+

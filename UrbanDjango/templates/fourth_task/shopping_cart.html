@@ -1,0 +1,25 @@
+{% extends "menu.html" %}
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Shopping cart</title>
+</head>
+
+
+{% block pagename %}
+    <h1>Корзина</h1>   
+{% endblock %}
+
+
+{% block menu %}
+    {{  block.super}}
+{% endblock %}
+
+
+{% block content %}
+    <h3>Корзина пока пуста</h3>
+    <button><a href="/platform/shop">Продолжить покупки</a></button>
+    <button><a href="/platform">Назад</a></button>
+{% endblock %}

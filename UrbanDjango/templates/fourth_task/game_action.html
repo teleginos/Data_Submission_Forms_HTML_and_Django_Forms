@@ -1,0 +1,29 @@
+{% extends "menu.html" %}
+
+
+
+{% block pagename %}
+    <h1>Action Game</h1>
+{% endblock %}
+
+{% block menu %}
+    {{ block.super }}
+{% endblock %}
+
+{% block content %}
+    <ul>
+        {% for image, game, link in combined_data %}
+        <p><img src= "{{ image }}" ></p>
+            
+            <li> {{ game }}
+            <button>
+                <a href= "{{ link }}">Купить</a>
+            </button>
+            </li>
+        {% endfor %}
+        
+    </ul>
+    <button><a href="/shop">Назад</a></button>
+{% endblock %}
+
+
