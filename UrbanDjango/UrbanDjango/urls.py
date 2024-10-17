@@ -14,16 +14,24 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
 from django.contrib import admin
 from django.urls import path
-from task3.views import home_page, Shop, ShoppingCart, ActionGame, AdventureGame, RolePlayingGame
+from task4.views import (
+    home_page,
+    shop,
+    action_game,
+    adventure_game,
+    role_playing_game,
+    shopping_cart,
+)
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', home_page),
-    path('shop/', Shop.as_view()),
-    path('shopping_cart/', ShoppingCart.as_view()),
-    path('shop/game_action/', ActionGame.as_view()),
-    path('shop/game_adventure/', AdventureGame.as_view()),
-    path('shop/game_role_playing/', RolePlayingGame.as_view()),
+    path("admin/", admin.site.urls),
+    path("platform/", home_page),
+    path("platform/shop/", shop),
+    path("platform/shopping_cart/", shopping_cart),
+    path("platform/shop/game_action/", action_game),
+    path("platform/shop/game_adventure/", adventure_game),
+    path("platform/shop/game_role_playing/", role_playing_game),
 ]
