@@ -25,9 +25,12 @@ from task4.views import (
     role_playing_game,
     shopping_cart,
 )
+from task5.views import sign_up_by_html, sign_up_by_django
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path("", sign_up_by_html),
+    path("django_sign_up/", sign_up_by_django),
     path("platform/", home_page),
     path("platform/shop/", shop),
     path("platform/shopping_cart/", shopping_cart),
